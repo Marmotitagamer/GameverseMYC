@@ -1,0 +1,403 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d2e2e, #0a1f1f);
+    color: #d0f0ec;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #0f3d3d, #071a1a);
+    color: #d0f0ec;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-bottom: 2px solid #1a6060;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0f2e2e;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #1a5050;
+}
+
+nav a {
+    color: #a8e6df;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #1a6060;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    background-color: #071515;
+    color: #6abfb8;
+    text-align: center;
+    padding: 1.2rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #1a4a4a;
+    font-size: 0.9rem;
+}
+
+.container {
+    width: 45%;
+    margin: 4rem auto;
+    padding: 3rem;
+    background-color: #112828;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid #1e5050;
+    animation: slideIn 1s ease;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-color: #2a7070;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #5dd6c8;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeInTitle 1.2s ease;
+    text-shadow: 0 0 10px rgba(93, 214, 200, 0.3);
+}
+
+@keyframes fadeInTitle {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #a8e6df;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #d0f0ec;
+    background-color: #0d2020;
+    border: 1px solid #1e5050;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2a8080;
+    box-shadow: 0 0 10px rgba(42, 128, 128, 0.5);
+    background-color: #0f2828;
+}
+
+.form-control::placeholder {
+    color: #fff;
+}
+.form-control:placeholder {
+    color: #fff;
+}
+
+button[type="submit"], .btn-primary {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1a6060;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    letter-spacing: 0.05em;
+}
+
+button[type="submit"]:hover, .btn-primary:hover {
+    background-color: #228080;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(26, 96, 96, 0.6);
+}
+
+.btn-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #5dd6c8;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+select.form-control, input[type="number"] {
+    border-radius: 8px;
+}
+
+.alert {
+    padding: 0.8rem;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    animation: fadeInAlert 1s ease;
+}
+
+.alert-danger {
+    background-color: #7a1f1f;
+    border: 1px solid #aa3333;
+}
+
+@keyframes fadeInAlert {
+    0% { opacity: 0; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.banner-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: #5dd6c8;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+    color: #6abfb8;
+    line-height: 1.6;
+}
+
+p a {
+    font-weight: bold;
+    color: #5dd6c8;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/*-------------------- codigo para CATALOGO --------------------*/
+
+.container {
+    background-color: #0d2b27 !important;
+    border: 1px solid #1a4a42 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    color: #e2f0ee;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 0 1px rgba(45,212,191,0.22);
+}
+
+.container-img-top {
+    width: 100%;
+    border-bottom: 2px solid #1a4a42;
+    filter: brightness(.92) saturate(1.1);
+}
+
+.container-body {
+    background-color: #0d2b27;
+    padding: 1.1rem 1.25rem;
+}
+
+.container-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2dd4bf;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.container-text {
+    font-size: .83rem;
+    color: #7fbfb8;
+    line-height: 1.55;
+}
+
+.container .list-group-flush {
+    border-top: 1px solid #1a4a42 !important;
+    border-bottom: 1px solid #1a4a42 !important;
+}
+
+.container .list-group-flush .list-group-item {
+    background-color: #0d2b27 !important;
+    color: #a8d5cf !important;
+    border-color: rgba(26, 74, 66, .6) !important;
+    font-size: .82rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: background .18s ease, color .18s ease;
+}
+
+.container .list-group-flush .list-group-item::before {
+    content: '▸';
+    color: #2dd4bf;
+    font-size: .68rem;
+    flex-shrink: 0;
+}
+
+.container .list-group-flush .list-group-item:hover {
+    background-color: rgba(45, 212, 191, .1) !important;
+    color: #e2f0ee !important;
+}
+
+.container-body:last-child {
+    background-color: rgba(0, 0, 0, .2) !important;
+    border-top: 1px solid #1a4a42;
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.container-link {
+    font-size: .8rem;
+    font-weight: 600;
+    color: #2dd4bf !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    padding: .3rem .75rem;
+    border: 1px solid #2dd4bf;
+    border-radius: 6px;
+    transition: background .2s, color .2s, box-shadow .2s;
+}
+
+.container-link:hover {
+    background: #2dd4bf !important;
+    color: #0a1f1c !important;
+    box-shadow: 0 0 12px rgba(45,212,191,.45);
+}
+
+
+/*    COMPRAS    */
+
+ .compras-wrapper {
+        padding: 2rem 3rem 6rem 3rem;
+    }
+
+    .section-title {
+        color: #2dd4bf;
+        font-size: 1.6rem;
+        font-weight: 700;
+        border-bottom: 2px solid #1a4a42;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
+    }
+
+    /* ── Tarjetas de catálogo ── */
+    .catalogo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .juego-card {
+        background: #0d2b27;
+        border: 1px solid #1a4a42;
+        border-radius: 12px;
+        padding: 1.2rem;
+        text-align: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .juego-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(45,212,191,0.2);
+    }
+
+    .juego-card .juego-icono {
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .juego-card .juego-nombre {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #2dd4bf;
+        margin-bottom: 0.3rem;
+    }
+
+    .juego-card .juego-precio {
+        font-size: 1rem;
+        color: #fbbf24;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+    }
+
+    .btn-agregar {
+        background: #1a6060;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 0.4rem 1rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-agregar:hover {
+        background: #228080;
+        transform: scale(1.05);
+        color: #fff;
+    }
+
+    
